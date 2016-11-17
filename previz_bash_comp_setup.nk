@@ -1,0 +1,400 @@
+#! C:/Program Files/Nuke8.0v4/nuke-8.0.v4.dll -nx
+version 8.0 v4
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1197" h="885" screen="0">
+        <splitter orientation="1">
+            <split size="591"/>
+            <splitter orientation="1">
+                <split size="40"/>
+                <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                    <page id="Toolbar.1"/>
+                </dock>
+                <split size="547"/>
+                <splitter orientation="2">
+                    <split size="481"/>
+                    <dock id="" activePageId="Viewer.1">
+                        <page id="Viewer.1"/>
+                    </dock>
+                    <split size="339"/>
+                    <dock id="" activePageId="DAG.1">
+                        <page id="DAG.1"/>
+                        <page id="Curve Editor.1"/>
+                        <page id="DopeSheet.1"/>
+                    </dock>
+                </splitter>
+            </splitter>
+            <split size="586"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.MantinsWindow"/>
+            </dock>
+        </splitter>
+    </window>
+    <window x="0" y="885" w="1200" h="948" screen="0">
+        <splitter orientation="2">
+            <split size="912"/>
+            <dock id="" activePageId="Script Editor.1">
+                <page id="Script Editor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/hejian/Documents/SisenMESS/hejian/RecvFileTempFolder/Jon(jonthan)/2016-04-15/14.41.41/previz_bash_comp_setup.nk
+ frame 1001
+ first_frame 1001
+ last_frame 1100
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1.7857 2K_QuasiAnamorphic 2048x1556 (2.35)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ label "ADD ROTO"
+ note_font "Verdana Bold Bold"
+ note_font_size 42
+ xpos 70
+ ypos -1378
+ bdwidth 2422
+ bdheight 533
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode3
+ tile_color 0xaaaaaa00
+ label "3D "
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 42
+ xpos -1735
+ ypos -1377
+ bdwidth 683
+ bdheight 389
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode5
+ label "RENDER TO THEATRE"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 42
+ xpos -1283
+ ypos -176
+ bdwidth 812
+ bdheight 417
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0xaaaaaa00
+ label FOOTAGE
+ note_font "Verdana Bold Bold"
+ note_font_size 42
+ xpos -844
+ ypos -1377
+ bdwidth 683
+ bdheight 389
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode4
+ label "RENDER TO MAYA"
+ note_font "Verdana Bold Bold"
+ note_font_size 42
+ xpos -220
+ ypos -175
+ bdwidth 812
+ bdheight 417
+}
+StickyNote {
+ inputs 0
+ name StickyNote2
+ label "ADD ADDITIONAL LAYERS WHERE NECESSARY"
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 50
+ xpos 1246
+ ypos -1333
+}
+StickyNote {
+ inputs 0
+ name StickyNote4
+ label R:/filmServe/1004_JA_WWXD/VFX/sequences
+ note_font "Verdana Bold Bold Bold"
+ note_font_size 20
+ xpos -1704
+ ypos -1046
+}
+StickyNote {
+ inputs 0
+ name StickyNote3
+ label R:/filmServe/1004_JA_WWXD/VFX/rawPlates/2048x1556_JPEG
+ note_font "Verdana Bold Bold"
+ note_font_size 20
+ xpos -842
+ ypos -1042
+}
+Read {
+ inputs 0
+ file R:/filmServe/1004_JA_WWXD/VFX/sequences/V_017/141a_12b_18_cg_01/zup_renders/V_017_roto_plane_yoyo_v001/V_017_roto_plane_yoyo_v001_####.tiff
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read2
+ xpos 216
+ ypos -1256
+}
+Read {
+ inputs 0
+ file R:/filmServe/1004_JA_WWXD/VFX/sequences/V_017/141a_12b_18_cg_01/zup_renders/V_017_roto_jerrican_yoyo_v001/V_017_roto_jerrican_yoyo_v001_####.tiff
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read3
+ xpos 482
+ ypos -1257
+}
+Merge2 {
+ inputs 0
+ name Merge5
+ xpos 906
+ ypos -1070
+}
+Merge2 {
+ name Merge4
+ xpos 705
+ ypos -1070
+}
+Merge2 {
+ inputs 2
+ name Merge3
+ xpos 482
+ ypos -1070
+}
+Merge2 {
+ inputs 2
+ name Merge2
+ xpos 216
+ ypos -1070
+}
+Dot {
+ name Dot4
+ xpos 250
+ ypos -694
+}
+Read {
+ inputs 0
+ file R:/filmServe/1004_JA_WWXD/VFX/rawPlates/2048x1556_JPEG/V_017/V_017.####.JPEG
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ first 1001
+ last 1100
+ origfirst 1001
+ origlast 1100
+ origset true
+ name Read4
+ xpos -682
+ ypos -1266
+}
+Reformat {
+ scale {1.7854 1}
+ resize distort
+ name Reformat5
+ note_font Verdana
+ xpos -682
+ ypos -1182
+ disable true
+}
+set N13b59560 [stack 0]
+Dot {
+ name Dot1
+ xpos -648
+ ypos -879
+}
+set N13b598d0 [stack 0]
+Dot {
+ name Dot2
+ xpos -93
+ ypos -879
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy1
+ xpos -127
+ ypos -703
+}
+Premult {
+ name Premult1
+ xpos -127
+ ypos -667
+}
+Dot {
+ name Dot3
+ xpos -93
+ ypos -346
+}
+set N13b5a690 [stack 0]
+Constant {
+ inputs 0
+ channels rgb
+ name Constant1
+ xpos -1573
+ ypos -1260
+}
+Dot {
+ name Dot7
+ xpos -1539
+ ypos -462
+}
+push $N13b598d0
+Merge2 {
+ inputs 2
+ name Merge6
+ label "ADD CG"
+ note_font "Verdana Bold Bold"
+ xpos -682
+ ypos -471
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos -682
+ ypos -349
+}
+Reformat {
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ resize none
+ name Reformat3
+ label "2048x1556 SQUARE"
+ note_font "Verdana Bold Bold Bold"
+ xpos -682
+ ypos -131
+}
+Write {
+ name Write3
+ label "THEATRE OUTPUT\n2048x1556 SQUARE"
+ note_font "Verdana Bold Bold Bold"
+ xpos -682
+ ypos -37
+ addUserKnob {20 User l RenderInBackground}
+ addUserKnob {26 information l Info: T "More simple,more useful!Please make sure your setting didn't overflow available memory."}
+ addUserKnob {3 firstframe_1 l FirstFrame t "entry first frame of render range"}
+ firstframe_1 1001
+ addUserKnob {3 lastframe_1 l LastFrame t "entry last frame of render range"}
+ lastframe_1 1100
+ addUserKnob {3 splitNum t "entry number of splited framerange"}
+ splitNum 2
+ addUserKnob {3 maxThreads}
+ maxThreads 4
+ addUserKnob {3 maxCache}
+ maxCache 2000
+ addUserKnob {26 unnamed l "" +STARTLINE}
+ addUserKnob {22 renderinbackground l RenderInBackground -STARTLINE T "import time\nif nuke.thisNode().knob('file').value().find(':/') == -1:\n    nuke.message('file is empty')\nelse:\n    if os.path.exists(os.path.dirname(nuke.thisNode().knob('file').value()))==True:\n        print nuke.thisNode().knob('file').value()\n    else:\n        os.makedirs(os.path.dirname(nuke.thisNode().knob('file').value()))\n\n    firstframe_2 = int(nuke.thisNode().knob('firstframe_1').value())\n    lastframe_2 = int(nuke.thisNode().knob('lastframe_1').value())\n    splitnum_2 = int(nuke.thisNode().knob('splitNum').value())\n\n    subrange = int((lastframe_2 + 1 - firstframe_2)/splitnum_2)\n\n    maxthreads = nuke.thisNode().knob('maxThreads').value()\n    maxcache = nuke.thisNode().knob('maxCache').value()\n    view = nuke.views()\n    limits = \{'maxThreads':maxthreads,'maxCache':'%dM'%maxcache\}\n\n    for i in range(splitnum_2+1):\n        framerange = nuke.FrameRange()\n        frameranges = nuke.FrameRanges()\n\n        if firstframe_2 - 1 + subrange * (i+1) >= lastframe_2:\n            framerange.setLast(lastframe_2)\n        else:\n            framerange.setLast(firstframe_2 - 1 + subrange * (i+1))\n        if lastframe_2 >= firstframe_2 + subrange * i:\n            framerange.setFirst(firstframe_2 + subrange * i)\n            framerange.setIncrement(1)\n            frameranges.add(framerange)\n            time.sleep(0.1)\n            print frameranges\n            nuke.executeBackgroundNuke(nuke.EXE_PATH,\[nuke.thisNode()],frameranges,view,limits)\n        else:\n            pass"}
+}
+StickyNote {
+ inputs 0
+ name StickyNote1
+ label "BASH SCRIPT FOR SEPARATING LAYERS \nAND PREVIZ OUTPUT FOR THEATRE"
+ note_font "Verdana Bold Bold"
+ note_font_size 50
+ xpos -515
+ ypos -1820
+}
+push $N13b5a690
+Dot {
+ name Dot5
+ xpos -93
+ ypos -38
+}
+set N13b5aa00 [stack 0]
+Dot {
+ name Dot6
+ xpos 315
+ ypos -38
+}
+Reformat {
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ resize none
+ name Reformat1
+ label "2048x1556 SQUARE"
+ note_font "Verdana Bold Bold"
+ xpos 281
+ ypos 24
+}
+Write {
+ channels rgba
+ name Write2
+ label "THEATRE OUTPUT\n2048x1556 SQUARE"
+ note_font "Verdana Bold Bold"
+ xpos 281
+ ypos 72
+ addUserKnob {20 User l RenderInBackground}
+ addUserKnob {26 information l Info: T "More simple,more useful!Please make sure your setting didn't overflow available memory."}
+ addUserKnob {3 firstframe_1 l FirstFrame t "entry first frame of render range"}
+ firstframe_1 1001
+ addUserKnob {3 lastframe_1 l LastFrame t "entry last frame of render range"}
+ lastframe_1 1100
+ addUserKnob {3 splitNum t "entry number of splited framerange"}
+ splitNum 2
+ addUserKnob {3 maxThreads}
+ maxThreads 4
+ addUserKnob {3 maxCache}
+ maxCache 2000
+ addUserKnob {26 unnamed l "" +STARTLINE}
+ addUserKnob {22 renderinbackground l RenderInBackground -STARTLINE T "import time\nif nuke.thisNode().knob('file').value().find(':/') == -1:\n    nuke.message('file is empty')\nelse:\n    if os.path.exists(os.path.dirname(nuke.thisNode().knob('file').value()))==True:\n        print nuke.thisNode().knob('file').value()\n    else:\n        os.makedirs(os.path.dirname(nuke.thisNode().knob('file').value()))\n\n    firstframe_2 = int(nuke.thisNode().knob('firstframe_1').value())\n    lastframe_2 = int(nuke.thisNode().knob('lastframe_1').value())\n    splitnum_2 = int(nuke.thisNode().knob('splitNum').value())\n\n    subrange = int((lastframe_2 + 1 - firstframe_2)/splitnum_2)\n\n    maxthreads = nuke.thisNode().knob('maxThreads').value()\n    maxcache = nuke.thisNode().knob('maxCache').value()\n    view = nuke.views()\n    limits = \{'maxThreads':maxthreads,'maxCache':'%dM'%maxcache\}\n\n    for i in range(splitnum_2+1):\n        framerange = nuke.FrameRange()\n        frameranges = nuke.FrameRanges()\n\n        if firstframe_2 - 1 + subrange * (i+1) >= lastframe_2:\n            framerange.setLast(lastframe_2)\n        else:\n            framerange.setLast(firstframe_2 - 1 + subrange * (i+1))\n        if lastframe_2 >= firstframe_2 + subrange * i:\n            framerange.setFirst(firstframe_2 + subrange * i)\n            framerange.setIncrement(1)\n            frameranges.add(framerange)\n            time.sleep(0.1)\n            print frameranges\n            nuke.executeBackgroundNuke(nuke.EXE_PATH,\[nuke.thisNode()],frameranges,view,limits)\n        else:\n            pass"}
+}
+push $N13b59560
+push $N13b5aa00
+Reformat {
+ format "3656 1556 0 0 3656 1556 1 Forever_Young_Maya_Output"
+ resize fit
+ name Reformat2
+ label 3656x1556
+ note_font "Verdana Bold Bold"
+ xpos -127
+ ypos 23
+ disable true
+}
+set N13b5b7c0 [stack 0]
+Viewer {
+ inputs 2
+ frame 1001
+ input_process false
+ name Viewer1
+ xpos -127
+ ypos 393
+}
+push $N13b5b7c0
+Write {
+ channels rgba
+ file R:/filmServe/1004_JA_WWXD/VFX/sequences/V_017/141a_12b_18_cg_01/CG/maya/images/V_017_previz_FG_v001/V_017_previz_FG_v001.####.png
+ file_type png
+ checkHashOnRead false
+ version 4
+ name Write1
+ label "MAYA OUTPUT\n3656x1556"
+ note_font "Verdana Bold Bold"
+ xpos -127
+ ypos 71
+ addUserKnob {20 User l RenderInBackground}
+ addUserKnob {26 information l Info: T "More simple,more useful!Please make sure your setting didn't overflow available memory."}
+ addUserKnob {3 firstframe_1 l FirstFrame t "entry first frame of render range"}
+ firstframe_1 1001
+ addUserKnob {3 lastframe_1 l LastFrame t "entry last frame of render range"}
+ lastframe_1 1100
+ addUserKnob {3 splitNum t "entry number of splited framerange"}
+ splitNum 2
+ addUserKnob {3 maxThreads}
+ maxThreads 4
+ addUserKnob {3 maxCache}
+ maxCache 2000
+ addUserKnob {26 unnamed l "" +STARTLINE}
+ addUserKnob {22 renderinbackground l RenderInBackground -STARTLINE T "import time\nif nuke.thisNode().knob('file').value().find(':/') == -1:\n    nuke.message('file is empty')\nelse:\n    if os.path.exists(os.path.dirname(nuke.thisNode().knob('file').value()))==True:\n        print nuke.thisNode().knob('file').value()\n    else:\n        os.makedirs(os.path.dirname(nuke.thisNode().knob('file').value()))\n\n    firstframe_2 = int(nuke.thisNode().knob('firstframe_1').value())\n    lastframe_2 = int(nuke.thisNode().knob('lastframe_1').value())\n    splitnum_2 = int(nuke.thisNode().knob('splitNum').value())\n\n    subrange = int((lastframe_2 + 1 - firstframe_2)/splitnum_2)\n\n    maxthreads = nuke.thisNode().knob('maxThreads').value()\n    maxcache = nuke.thisNode().knob('maxCache').value()\n    view = nuke.views()\n    limits = \{'maxThreads':maxthreads,'maxCache':'%dM'%maxcache\}\n\n    for i in range(splitnum_2+1):\n        framerange = nuke.FrameRange()\n        frameranges = nuke.FrameRanges()\n\n        if firstframe_2 - 1 + subrange * (i+1) >= lastframe_2:\n            framerange.setLast(lastframe_2)\n        else:\n            framerange.setLast(firstframe_2 - 1 + subrange * (i+1))\n        if lastframe_2 >= firstframe_2 + subrange * i:\n            framerange.setFirst(firstframe_2 + subrange * i)\n            framerange.setIncrement(1)\n            frameranges.add(framerange)\n            time.sleep(0.1)\n            print frameranges\n            nuke.executeBackgroundNuke(nuke.EXE_PATH,\[nuke.thisNode()],frameranges,view,limits)\n        else:\n            pass"}
+}

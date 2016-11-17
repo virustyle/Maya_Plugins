@@ -1,0 +1,65 @@
+Root { 
+ last_frame 3
+ onScriptLoad "if nuke.env['LINUX']:
+  nuke.tcl('load ffmpegReader')
+  nuke.tcl('load ffmpegWriter')
+else:
+  nuke.tcl('load movReader')
+  nuke.tcl('load movWriter')"
+ first_frame 1
+ lock_range "true"
+ fps 5
+}
+Camera2 { 
+ inputs 0
+ read_from_file "true"
+ xpos 110
+ file "R:/filmServe/1015_JA_MaiBingBing/VFX/sequences/Test_02/TePi_001_010/Matchmove/publish/v002/TePi_001_010_track_toComp_Kiro_v002.abc"
+ ypos 123
+}
+Read { 
+ inputs 0
+ file "R:/filmServe/1015_JA_MaiBingBing/VFX/sequences/Test_02/TePi_001_010/Matchmove/publish/v002/TePi_001_010_track_uvExportA_EXR_jason_v002/TePi_001_010_track_uvExportA_EXR_jason_v002.####.exr"
+ format ""
+ first 1051
+ last 1100
+ auto_alpha "true"
+ xpos 0
+ ypos 0
+}
+UVTile2 { 
+ xpos 0
+ ypos 84
+ udim_enable "true"
+}
+ReadGeo2 { 
+ xpos 0
+ ypos 108
+ file "R:/filmServe/1015_JA_MaiBingBing/VFX/sequences/Test_02/TePi_001_010/CG/scenes/Animation/Alembic/MBB_TePi_001_010_v009.abc"
+}
+Constant { 
+ channels "rgb"
+ inputs 0
+ xpos -110
+ ypos 120
+ format "2048 2048 0 0 2048 2048 1 maya_format(VHQ)"
+}
+ScanlineRender { 
+ projection_mode "uv"
+ inputs 3
+ xpos 0
+ ypos 144
+}
+Write { 
+ file_type "exr"
+ channels "rgba"
+ xpos 0
+ ypos 168
+ file "R:/filmServe/1015_JA_MaiBingBing/VFX/sequences/Test_02/TePi_001_010/Zup_renders/Comp/TePi_001_010_slp_project_jason_v005/TePi_001_010_slp_project_jason_v005.%04d.dpx"
+}
+Viewer { 
+ ypos 204
+ frame 1001
+ xpos 0
+ input_process "false"
+}
